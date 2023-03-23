@@ -1,0 +1,17 @@
+<div class="card login mx-auto">
+     <title>Ingresar</title>
+   <div class="form-login">
+         <form (ngSubmit)="ingresar()" [formGroup]="loginForm">
+            <h5>Ingresar</h5>
+            <input class="controls" type="email" placeholder="Correo" formControlName="correo">
+            <span class="form-text text-danger" *ngIf="campoEsValido('correo')"> este campo es obligatorio </span>
+            <input class="controls" type="password" placeholder="Contraseña" formControlName="contrasena">
+            <span class="form-text text-danger" *ngIf="campoEsValido('contrasena')"> Este campo es obligatorio </span>
+            
+            <button type="submit" class="buttons" >Ingresar</button>
+        </form>
+        <button class="buttons" (click)="ingresarConGoogle()">Ingresar con Google</button>
+        <hr>
+        <button class="buttons" (click)="register()">Registrarse</button>
+   </div>
+</div>
